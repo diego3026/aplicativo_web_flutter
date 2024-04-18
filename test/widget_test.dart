@@ -7,12 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-<<<<<<< HEAD
-import 'package:untitled/main.dart';
-=======
 import 'package:sorteos_crm/src/app.dart';
->>>>>>> 85e5f6c (agregando supabase y vistas)
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

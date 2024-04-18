@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:untitled/widgets/CardSorteo.dart';
-import 'package:untitled/widgets/Portrait.dart';
+import 'package:sorteos_crm/widgets/CardSorteo.dart';
+import 'package:sorteos_crm/widgets/Portrait.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -18,7 +18,9 @@ class _InitialScreenState extends State<InitialScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Potrait(src: "https://th.bing.com/th/id/OIP.yP0fg5-5qevo1uHrKxYQ8AHaDs?w=294&h=174&c=7&r=0&o=5&pid=1.7"),
+        Potrait(
+            src:
+                "https://th.bing.com/th/id/OIP.yP0fg5-5qevo1uHrKxYQ8AHaDs?w=294&h=174&c=7&r=0&o=5&pid=1.7"),
         InitialContent()
       ],
     );
@@ -35,9 +37,10 @@ class InitialContent extends StatefulWidget {
 class _InitialContentState extends State<InitialContent> {
   @override
   Widget build(BuildContext context) {
-    return Container(child: Column(children: [
-      Text("Sorteos"),
-      Text("Sorteos2")
-    ],),);
+    return Container(
+      child: Column(
+        children: [Text("Sorteos"), Text("Sorteos2")],
+      ),
+    );
   }
 }
