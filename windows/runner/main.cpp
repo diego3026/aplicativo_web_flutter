@@ -27,7 +27,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   FlutterWindow window(project);
   Win32Window::Point origin(10, 10);
   Win32Window::Size size(1280, 720);
+<<<<<<< HEAD
   if (!window.Create(L"untitled", origin, size)) {
+=======
+  if (!window.Create(L"sorteos_crm", origin, size)) {
+>>>>>>> 85e5f6c (agregando supabase y vistas)
     return EXIT_FAILURE;
   }
   window.SetQuitOnClose(true);
