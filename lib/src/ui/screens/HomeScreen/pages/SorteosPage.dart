@@ -24,10 +24,10 @@ class SorteosPage extends StatelessWidget {
     ),
   ];
 
-  final int numItems = 3;
-
   @override
   Widget build(BuildContext context) {
+    int numItems = list_sorteos.length;
+
     return Container(
       child: Row(
         children: [
