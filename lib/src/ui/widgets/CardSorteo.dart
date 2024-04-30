@@ -19,46 +19,25 @@ class CardSorteo extends StatefulWidget {
 class _CardSorteoState extends State<CardSorteo> {
   @override
   Widget build(BuildContext context) {
+    final double _dimension = MediaQuery.of(context).size.width * 0.2 - 14;
+
     return Card(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
-              spreadRadius: 5,
-              blurRadius: 7,
-              offset: Offset(0, 3),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        elevation: 5,
+        child: SizedBox.square(
+          dimension: _dimension,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.asset(
+                widget.src,
+                fit: BoxFit.cover,
+              ),
             ),
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Stack(
-              alignment: Alignment.center,
-              children: [
-                Expanded(
-                  child: Image.asset(widget.src),
-                ),
-                Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(6),
-                        color: Colors.white),
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 15, vertical: 6),
-                    child: Column(
-                      children: [
-                        Text(widget.title),
-                        Text(widget.resultado),
-                      ],
-                    )),
-              ],
-            )
-          ],
-        ),
-      ),
-    );
+            Center(child: Container(decoration: BoxDecoration(color: Colors.white), child: Text("${widget.title} \n ${widget.resultado}", textAlign: TextAlign.center,),))
+          ]),
+        ));
   }
 }
