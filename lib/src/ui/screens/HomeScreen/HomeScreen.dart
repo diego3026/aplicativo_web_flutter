@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../widgets/FooterWidget.dart';
 import '../../widgets/NavItem.dart';
 import '../../widgets/Navbar.dart';

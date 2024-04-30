@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-    "name": "untitled",
-    "short_name": "untitled",
-=======
     "name": "sorteos_crm",
     "short_name": "sorteos_crm",
->>>>>>> 85e5f6c (agregando supabase y vistas)
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

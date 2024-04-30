@@ -11,3 +11,5 @@ Future<void> main() async {
 
   runApp(const MyApp());
 }
+
+// flutter run -d edge --web-renderer htm
