@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:untitled/widgets/Ingresar.dart';
-import 'package:untitled/widgets/Registrarse.dart';
+import 'package:sorteos_crm/widgets/Ingresar.dart';
+import 'package:sorteos_crm/widgets/Registrarse.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
