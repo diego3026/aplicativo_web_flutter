@@ -1,23 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/screens/HomePage.dart';
+import 'package:sorteos_crm/src/app.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: '.env');
+  await Supabase.initialize(
+      url: dotenv.env['SUPABASE_URL'].toString(),
+      anonKey: dotenv.env['SUPABASE_ANONKEY'].toString());
+
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Pagina web',
-      initialRoute: "/",
-      routes: {
-        "/": (context) => HomePage(),
-        "/*": (context) => HomePage(),
-      },
-    );
-  }
-}
+// flutter run -d edge --web-renderer htm
